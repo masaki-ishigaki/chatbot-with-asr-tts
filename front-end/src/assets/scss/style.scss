@@ -1,0 +1,65 @@
+@import "./reset.scss";
+@import "./_fonts";
+
+// Load fonts
+// Syntax: @include font-face('font name', 'path', 'weight', 'style', 'type')
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Thin.otf', 100, null, otf);
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Light.otf', 300, null, otf);
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Regular.otf', normal, null, otf);
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Medium.otf', 500, null, otf);
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Bold.otf', bold, null, otf);
+@include font-face('Noto Sans JP', '../font/NotoSansJP-Black.otf', 900, null, otf);
+
+ol, ul {
+  li {
+    cursor: pointer;
+  }
+}
+
+:root {
+  --header-height: 70px;
+  --footer-height: 70px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+// TODO: 他ブラウザでのスクロールバー非表示処理
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 10px;
+  box-shadow: none;
+  border-style: solid;
+  border-width: 2px;
+}
+
+
+// レスポンシブ対応
+@media screen and (max-width:480px) {
+  :root {
+    --header-height: 50px;
+    --footer-height: 55px;
+  }
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width:480px) and (max-width:1050px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width:1050px) {
+  html {
+    font-size: 18px;
+  }
+}

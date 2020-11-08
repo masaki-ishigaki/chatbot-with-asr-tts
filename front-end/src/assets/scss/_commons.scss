@@ -1,0 +1,25 @@
+// Common Styles
+// These are mixins to be used in ...
+@mixin aboutIddmTitle {
+  margin: 10px 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  @media screen and (max-width:480px) {
+    font-size: 1.4rem;
+  }
+}
+@mixin aboutIddmSubtitle {
+  margin: 5px 0;
+  color: #FFCCCC;
+  font-size: 1.2rem;
+  font-weight: bold;
+  @media screen and (max-width:480px) {
+    font-size: 1.1rem;
+  }
+}
+@mixin aboutIddmText {
+  font-size: 1.2em;
+  @media screen and (max-width:480px) {
+    font-size: 1.1rem;
+  }
+}
